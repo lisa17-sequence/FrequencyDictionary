@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FrequencyDictionary", "FrequencyDictionary.vcxproj", "{54719954-DD7F-4BA0-9BFE-2AB01BE2DC44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54719954-DD7F-4BA0-9BFE-2AB01BE2DC44}.Debug|x64.ActiveCfg = Debug|x64
+		{54719954-DD7F-4BA0-9BFE-2AB01BE2DC44}.Debug|x64.Build.0 = Debug|x64
+		{54719954-DD7F-4BA0-9BFE-2AB01BE2DC44}.Debug|x86.ActiveCfg = Debug|Win32
+		{54719954-DD7F-4BA0-9BFE-2AB01BE2DC44}.Debug|x86.Build.0 = Debug|Win32
+		{54719954-DD7F-4BA0-9BFE-2AB01BE2DC44}.Release|x64.ActiveCfg = Release|x64
+		{54719954-DD7F-4BA0-9BFE-2AB01BE2DC44}.Release|x64.Build.0 = Release|x64
+		{54719954-DD7F-4BA0-9BFE-2AB01BE2DC44}.Release|x86.ActiveCfg = Release|Win32
+		{54719954-DD7F-4BA0-9BFE-2AB01BE2DC44}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F36694A-63C9-4DCD-8957-C85D842E918E}
+	EndGlobalSection
+EndGlobal
