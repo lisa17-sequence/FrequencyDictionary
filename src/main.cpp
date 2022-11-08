@@ -2,6 +2,8 @@
 
 int main() {
 	dictionary::Dictionary text("text.txt");
-	text.CounterOfWords();
+	text.CounterOfWords("The");
+
+
 	return 0;
 }

@@ -4,10 +4,12 @@ namespace dictionary
 {
 	std::vector<std::string> Dictionary::MakeWordsSeparated(std::string textAtString)
 	{
+		if (textAtString.length() == 0)
+			return std::vector<std::string>{};
 		std::string separatedWord = "";
 		std::vector<std::string> sequenceOfWords{};
 		for (int i = 0; i < textAtString.length() - 1; ++i) {
-			if (textAtString[i] != '\n' and textAtString[i] != ' ' and textAtString[i] != '.' and textAtString[i] != ',' and textAtString[i] != ';' and textAtString[i] != ':' and textAtString[i] != '!' and textAtString[i] != '?' and textAtString[i] != '-' and textAtString[i] != '(' and textAtString[i] != ')' and textAtString[i] != '"') {
+			if (textAtString[i] != '\n' and textAtString[i] != ' ' and textAtString[i] != '.' and textAtString[i] != ',' and textAtString[i] != ';' and textAtString[i] != ':' and textAtString[i] != '!' and textAtString[i] != '?' and textAtString[i] != '-' and textAtString[i] != '(' and textAtString[i] != ')' and textAtString[i] != '"' and textAtString[i] != '/' and textAtString[i] != '\\' and textAtString[i] != '	') {
 				separatedWord += textAtString[i];
 			}
 			else {
@@ -20,16 +22,16 @@ namespace dictionary
 		return sequenceOfWords;
 	}
 
-	//std::vector<std::string> Dictionary::MakeWordsSeparatedBoost(std::string textAtString)
-	//{
-	//	std::vector<std::string> sequenceOfWords{};
-	//	boost::char_separator<char> sep(" .,;:!?-()""");
-	//	boost::tokenizer<boost::char_separator<char>> tok(textAtString, sep);
-	//	for (auto it = tok.begin(); it != tok.end(); it++) {
-	//		sequenceOfWords.push_back(*it);
-	//	}
-	//	return sequenceOfWords;
-	//}
+	std::vector<std::string> Dictionary::MakeWordsSeparatedBoost(std::string textAtString)
+	{
+		std::vector<std::string> sequenceOfWords{};
+		boost::char_separator<char> sep(" .,;:!?-()""");
+		boost::tokenizer<boost::char_separator<char>> tok(textAtString, sep);
+		for (auto it = tok.begin(); it != tok.end(); it++) {
+			sequenceOfWords.push_back(*it);
+		}
+		return sequenceOfWords;
+	}
 
 	std::string Dictionary::ReadTextFromFile(std::string nameOfFile)
 	{
@@ -37,7 +39,6 @@ namespace dictionary
 		std::string line;
 		std::ifstream text_For_Read(nameOfFile);
 		if (text_For_Read.is_open()) {
-			std::cout << "Successful file upload" << '\n';
 			while (std::getline(text_For_Read, line)) {
 				textAtString += line + '\n';
 				++counter_Of_Lines;
@@ -68,6 +69,8 @@ namespace dictionary
 
 	int Dictionary::CounterOfWords(std::string key)
 	{
+		if (sequenceOfWords.size() == 0)
+			return 0;
 		std::map<std::string, int> countOfWords{};
 		for (auto& words : sequenceOfWords) {
 			++countOfWords[words];
@@ -77,7 +80,7 @@ namespace dictionary
 			std::cout << "The word was not found." << '\n';
 			return -1;
 		}
-		std::cout << key << " went into text " << countOfWords[key] << " times" << '\n';
+		std::cout << "The word " << "\"" << key << "\"" << " went into " << "\"" << FileName << "\"" << ' ' << countOfWords[key] << " time(s)" << '\n';
 		return countOfWords[key];
 	}
 

@@ -1,0 +1,6 @@
+The quick brown fox jumps over the lazy dog;
+This were \Pangram/
+
+	"Moscow - is the capital of our Motherland. I like everything about it: its squares and squares, monuments and sculptures, gardens and parks.
+Aren't you tired of wandering around Moscow? I love Moscow! I like Moscow, but I love my (native) Sevastopol."
+

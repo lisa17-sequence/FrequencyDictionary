@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3fc32654-67a3-4d95-8344-e7659c127cdd}</ProjectGuid>
+    <ProjectGuid>{fffadfc1-d46b-4471-bd8a-689b6f54c9fd}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
@@ -33,7 +33,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\kobri\Desktop\Lisa's_Folder\Projects\FrequencyDictionary\src;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\kobri\Desktop\Lisa's_Folder\Projects\FrequencyDictionary\src\FrequencyDictionary.h;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -48,7 +48,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FrequencyDictionary.vcxproj">
+    <ProjectReference Include="..\FrequencyDictionary\FrequencyDictionary.vcxproj">
       <Project>{54719954-dd7f-4ba0-9bfe-2ab01be2dc44}</Project>
     </ProjectReference>
   </ItemGroup>
@@ -57,13 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="text.txt" />
-    <Text Include="text0.txt" />
-    <Text Include="text1.txt" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.1.8.1.6\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.targets" Condition="Exists('..\..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.1.8.1.6\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.targets')" />
+    <Import Project="..\FrequencyDictionary\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.1.8.1.6\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.targets" Condition="Exists('..\FrequencyDictionary\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.1.8.1.6\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.targets')" />
   </ImportGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -93,7 +91,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>C:\Users\kobri\Desktop\Lisa's_Folder\Projects\FrequencyDictionary\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\kobri\Desktop\Lisa's_Folder\Projects\FrequencyDictionary\x64\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>FrequencyDictionary.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -133,6 +131,6 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.1.8.1.6\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.1.8.1.6\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.targets'))" />
+    <Error Condition="!Exists('..\FrequencyDictionary\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.1.8.1.6\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\FrequencyDictionary\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.1.8.1.6\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.targets'))" />
   </Target>
 </Project>
